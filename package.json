@@ -6,7 +6,12 @@
         "start": "docker-compose up -d",
         "start:dev": "docker-compose up -d && npm run dev",
         "stop": "docker-compose down",
-        "wp": "docker exec -it $(docker ps -qf \"name=wordpress\") wp $* --allow-root"
+        "install": "export $(grep -o \"^[^#]*\" .env | xargs) && cd wp-content/themes/$THEME_FOLDER_NAME && npm install",
+        "build": "export $(grep -o \"^[^#]*\" .env | xargs) && cd wp-content/themes/$THEME_FOLDER_NAME && npm run build",
+        "dev": "export $(grep -o \"^[^#]*\" .env | xargs) && cd wp-content/themes/$THEME_FOLDER_NAME && npm run dev",
+        "wp": "docker exec -it $(docker ps -qf \"name=wordpress\") wp $* --allow-root",
+        "deploy-staging": "export $(grep -o \"^[^#]*\" .env | xargs) && npm run build && rsync --delete -av -e \"ssh -o ConnectTimeout=10\" ./build/$THEME_FOLDER_NAME $DEPLOY_STAGING_USER@$DEPLOY_STAGING_HOSTNAME:$DEPLOY_STAGING_PATH/themes/",
+        "deploy-plugins-staging": "export $(grep -o \"^[^#]*\" .env | xargs) && rsync --delete -av -e \"ssh -o ConnectTimeout=10\" ./wp-content/plugins $DEPLOY_STAGING_USER@$DEPLOY_STAGING_HOSTNAME:$DEPLOY_STAGING_PATH"
     },
     "dependencies": {}
 }
