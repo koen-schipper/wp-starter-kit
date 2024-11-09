@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Font sizes
+/// @type Map
+$font-sizes: (
+    'xs': 0.75rem,
+    'sm': 0.875rem,
+    'base': 1rem,
+    'lg': 1.125rem,
+    'xl': 1.25rem,
+    '2xl': 1.5rem,
+    '3xl': 1.875rem,
+    '4xl': 2.25rem,
+    '5xl': 3rem,
+) !default;
+
+@function fontsize($size) {
+    @return map-get($font-sizes, $size);
+}
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Primary brand color
+/// @type Color
+$primary-color: rgb(136, 142, 237) !default;
+
+/// Secondary brand color
+/// @type Color
+$secondary-color: rgb(220, 220, 220) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1280px !default;
+
+/// Section margin
+/// @type Length
+$section-margin: 50px !default;
+
+/// Header height
+/// @type Length
+$header-height: 75px !default;
+
+/// Footer height
+/// @type Length
+$footer-height: 50px !default;
+
+/// Breakpoints
+$mobile: 480px !default;
+$tablet: 768px !default;
+$laptop: 1024px !default;
+$desktop: 1280px !default;
+$widescreen: 1640px !default;

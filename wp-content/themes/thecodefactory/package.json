@@ -1,0 +1,18 @@
+{
+  "name": "vzero",
+  "version": "1.0.0",
+  "description": "Modern WordPress starter theme build for developers.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "l4",
+    "build": "l4 build --prod"
+  },
+  "author": "Koen Schipper",
+  "license": "ISC",
+  "devDependencies": {
+    "@labelvier/starter-kit-engine": "^1.4.0"
+  },
+  "dependencies": {
+    "alpinejs": "^3.14.1"
+  }
+}

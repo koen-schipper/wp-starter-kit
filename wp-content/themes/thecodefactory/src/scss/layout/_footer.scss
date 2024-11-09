@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site.
+// -----------------------------------------------------------------------------
+
+footer {
+    width: 100%;
+    height: $footer-height;
+    background-color: $secondary-color;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+
+      p {
+        margin: 0;
+        font-size: fontsize('base');
+
+        @include mobile {
+          font-size: fontsize('sm');
+        }
+      }
+    }
+}

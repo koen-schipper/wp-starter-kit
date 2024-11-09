@@ -1,0 +1,75 @@
+// --------------------------
+// text-with-image styles
+// --------------------------
+.text-with-image {
+  margin: $section-margin 0;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &.reverse {
+      flex-direction: row-reverse;
+
+      @include mobile {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &.w50-50 {
+      .content, .image {
+        width: 50%;
+      }
+
+      @include mobile {
+        .content, .image {
+          width: 100%;
+        }
+      }
+    }
+
+    &.w66-33 {
+      .content {
+        width: 66.67%;
+      }
+
+      .image {
+        width: 33.33%;
+      }
+
+      @include mobile {
+        .content, .image {
+          width: 100%;
+        }
+      }
+    }
+
+    &.w33-66 {
+      .content {
+        width: 33.33%;
+      }
+
+      .image {
+        width: 66.67%;
+      }
+
+      @include mobile {
+        .content, .image {
+          width: 100%;
+        }
+      }
+    }
+
+    .image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

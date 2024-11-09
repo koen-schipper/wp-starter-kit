@@ -1,0 +1,115 @@
+/**
+ * You can add admin styles here that should be applied to admin pages.
+ * This .scss file will be compiled to admincss.css in the root of the theme.
+ */
+
+.acf-fc-popup {
+  position: fixed;
+  top: 60px!important;
+  left: 245px!important;
+  width: 70% !important;
+  height: calc(100% - 250px) !important;
+  padding: 4.5rem 0.75rem 2rem!important;
+  background: #fff;
+  z-index: 999999;
+  max-width: 1100px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #303030;
+}
+
+.wp-admin .acf-fc-popup:before {
+  content: "Content Layouts";
+  position: absolute;
+  background: #f0f0f0;
+  width: calc(100% - 2rem);
+  left: 0;
+  top: 6px;
+  color: #303030;
+  border: 0;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #f1f1f1;
+}
+.wp-admin .acf-fc-popup:after {
+  content: "\f158";
+  font: normal 20px/1 dashicons;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #303030;
+  cursor: pointer;
+}
+.wp-admin .acf-fc-popup ul {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  height: 100%;
+}
+.wp-admin .acf-fc-popup ul li {
+  display: block;
+  width: calc(33.33% - 1rem);
+  position: relative;
+  min-height: 1px;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+.wp-admin .acf-fc-popup ul li a {
+  color: #303030;
+  text-align: center;
+  padding: 0.5rem 0.5rem 0;
+  border: 1px solid #e1e1e1;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
+  background: #f1f1f1;
+  transition: all 0.3s ease-in-out;
+}
+.wp-admin .acf-fc-popup ul li a:hover {
+  background: #d1d1d1;
+}
+
+.wp-admin .acf-fc-popup ul li a .acf-fc-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.wp-admin .acf-fc-popup ul li a .acf-fc-block .acf-fc-block-image {
+  width: 100%;
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wp-admin .acf-fc-popup ul li a .acf-fc-block .acf-fc-block-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.25rem;
+}
+
+.wp-admin .acf-fc-popup ul li a .acf-fc-block .acf-fc-block-title p {
+  max-width: 220px;
+}
+
+.acf-flexible-content .layout .acf-fc-layout-handle {
+  display: flex!important;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.acf-flexible-content .layout .acf-fc-layout-handle .acf-fc-block .acf-fc-block-title {
+  display: flex;
+  align-items: center;
+}
+
+.acf-flexible-content .layout .acf-fc-layout-handle .acf-fc-block .acf-fc-block-title p {
+  margin: 0;
+}
+
+.acf-flexible-content .layout .acf-fc-layout-handle .acf-fc-block .acf-fc-block-title .acf-fc-block-title-button {
+  display: none;
+}
